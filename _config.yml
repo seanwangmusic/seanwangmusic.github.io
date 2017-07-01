@@ -1,0 +1,42 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://seanwangmusic.com
+title: Sean Wang Music
+email: seanwangmusic@gmail.com
+author: Sean Wang
+description: > # "Write an awesome description for your new site here. 
+  You can edit this line in _config.yml. It will appear in your document 
+  head meta (for Google search results) and in your feed.xml site 
+  description.
+copyright: 'Copyright &copy; 2017 Sean Wang. All Rights Reserved.'
+credits: ''
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: youtube
+    url: https://www.youtube.com/channel/UC-S8u2h20iuf6fnRf9x3rGg
+  - title: facebook
+    url: https://www.facebook.com/SeanWangGuzheng/
+
+collections:
+- content_sections
+
+defaults:
+  - scope:
+      path: ""
+      type: content_sections
+    values:
+      layout: content_section

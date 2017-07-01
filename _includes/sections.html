@@ -1,0 +1,15 @@
+{% assign sections = site.content_sections | sort: 'order' %}
+{% for section in sections %}
+    <!-- {{ section.name }} Section -->
+    <section id="{{ section.name }}" class="container content-section {% if section.nocenter %}{% else %} text-center{% endif %}">
+        <div class="text-center"><h2>{{ section.headline }}</h2></div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            {% if section.img %}
+            <img class="img-responsive pull-right" src="img/{{ section.img }}" alt="{{section.name}}">
+            {% endif %}
+{{ section.content }}
+            </div>
+        </div>
+    </section>
+{% endfor %}

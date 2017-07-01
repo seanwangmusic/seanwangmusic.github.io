@@ -1,0 +1,49 @@
+<section id="contact">
+    <div class="banner">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Keep in Touch:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Contact:</h2>
+                    Sean Wang<br/> (909) 667-6761
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form action="https://formspree.io/{{ site.email }}" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="_replyto" id="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" name="message" id="message" rows="6"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-default" value="Send Message" class="special" />
+                        <input type="reset" class="btn" value="Clear" />
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        {% for social in site.social %}
+                        <li>
+                            <a href="{{ social.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+</section>
+<!-- /.banner -->
